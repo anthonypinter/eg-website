@@ -1,0 +1,134 @@
+/* ── Magic Site Navbar Redesign ── */
+
+#main-header {
+    background-color: #111111 !important;
+    border-bottom: 2px solid #c9a227;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Center the nav inside the header */
+.container.et_menu_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    min-height: 60px;
+}
+
+#et-top-navigation {
+    float: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0 !important;
+    width: 100%;
+}
+
+nav#top-menu-nav,
+#top-menu {
+    float: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    line-height: normal !important;
+}
+
+/* Nav items */
+#top-menu li {
+    display: inline-block;
+    padding-right: 0 !important;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Links */
+#top-menu a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    display: block;
+    padding: 20px 18px !important;
+    position: relative;
+    transition: color 0.25s ease !important;
+    opacity: 1 !important;
+}
+
+/* Gold underline that slides in on hover */
+#top-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background-color: #c9a227;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+/* Hover state */
+#top-menu a:hover,
+#top-menu-nav > ul > li > a:hover {
+    color: #c9a227 !important;
+    opacity: 1 !important;
+}
+
+#top-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active / current page */
+#top-menu li.current_page_item > a,
+#top-menu li.current-menu-item > a,
+#top-menu li.current-menu-ancestor > a {
+    color: #c9a227 !important;
+}
+
+#top-menu li.current_page_item > a::after,
+#top-menu li.current-menu-item > a::after,
+#top-menu li.current-menu-ancestor > a::after {
+    transform: scaleX(1);
+}
+
+/* Mobile nav bar */
+.mobile_nav .select_page {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mobile_menu_bar:before,
+.mobile_menu_bar:after {
+    color: #c9a227 !important;
+}
+
+/* Mobile dropdown */
+.et_mobile_menu {
+    background-color: #1a1a1a;
+    border-top: 2px solid #c9a227;
+}
+
+.et_mobile_menu li a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-bottom-color: #333 !important;
+}
+
+.et_mobile_menu li a:hover {
+    color: #c9a227 !important;
+    background-color: #222 !important;
+}
+
+@media (max-width: 980px) {
+    .container.et_menu_container {
+        justify-content: space-between;
+        min-height: 50px;
+    }
+
+    #et-top-navigation {
+        justify-content: flex-end;
+    }
+}

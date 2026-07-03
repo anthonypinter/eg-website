@@ -7,6 +7,8 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/formspree.css">
     <style>
     #page-content,
     #page-content p,
@@ -19,7 +21,29 @@
     #page-content span {
         color: #fff !important;
     }
-    </style>
+
+    #page-content .fs-form {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+
+    #page-content .fs-form * {
+        color: #262626 !important;
+    }
+
+    #page-content .fs-button {
+        color: #fff !important;
+        padding: 0.75rem 2rem !important;
+    }
+
+    #page-content .fs-input,
+    #page-content .fs-select,
+    #page-content .fs-textarea {
+        background-color: #fff !important;
+        color: #262626 !important;
+    }
+</style>
 </head>
 <body>
     <div id="page-container">
@@ -101,35 +125,26 @@
 
                                     <div id="maroon" class="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light">
                                         <div class="et_pb_text_inner">
-                                            <table style="width: 100%;">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Your Name</td>
-                                                        <td> : </td>
-                                                        <td><input type="text" name="yourName" style="width: 100%;"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Your Email</td>
-                                                        <td> : </td>
-                                                        <td><input type="text" name="yourEmail" style="width: 100%;"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Subject</td>
-                                                        <td> : </td>
-                                                        <td><input type="text" name="subject" style="width: 100%;"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Message Body</td>
-                                                        <td> : </td>
-                                                        <td><textarea name="message" rows="6" cols="45" style="width: 100%;"></textarea></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3" style="text-align: right;">
-                                                            <a href="mailto:anpi0510@colorado.edu" style="background: #3b6040; color: #fff; padding: 8px 20px; text-decoration: none; display: inline-block; margin-top: 10px;">Send</a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <form action="https://formspree.io/f/xrewrbva" class="fs-form" target="_top" method="POST">
+                                                <input type="hidden" name="originating_site" value="eddiegoldsteinmagic" />
+                                                <div class="fs-field">
+                                                    <label class="fs-label" for="name">Your Name</label>
+                                                    <input class="fs-input" id="name" name="name" required />
+                                                </div>
+                                                <div class="fs-field">
+                                                    <label class="fs-label" for="email">Email</label>
+                                                    <input class="fs-input" id="email" name="email" required />
+                                                    <p class="fs-description">This will help me respond to your query via an email.</p>
+                                                </div>
+                                                <div class="fs-field">
+                                                    <label class="fs-label" for="message">Message</label>
+                                                    <textarea class="fs-textarea" id="message" name="message" required></textarea>
+                                                    <p class="fs-description">What would you like to discuss?</p>
+                                                </div>
+                                                <div class="fs-button-group">
+                                                    <button class="fs-button" type="submit">Submit</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
 

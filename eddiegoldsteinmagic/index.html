@@ -8,6 +8,7 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <style>
     div.et_pb_section.et_pb_section_0 {
         background-image:url(images/bg.jpg) !important
@@ -126,5 +127,15 @@
         </div>
 
     </div>
+    <style>
+    #et-main-area { cursor: pointer; }
+    #et-main-area a { cursor: pointer; }
+    </style>
+    <script>
+    document.getElementById('et-main-area').addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
+        window.location.href = 'shows.html';
+    });
+    </script>
 </body>
 </html>
