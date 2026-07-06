@@ -1,99 +1,88 @@
 /* ── Magic Site Navbar Redesign ── */
 
 #main-header {
-    background-color: #111111 !important;
-    border-bottom: 2px solid #c9a227;
+    background-color: #000000 !important;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    padding-top: 14px;
 }
 
-/* Center the nav inside the header */
+/* Right-align the nav inside the header, full page width */
 .container.et_menu_container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 40px;
-    min-height: 60px;
+    align-items: stretch;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
 }
 
 #et-top-navigation {
     float: none !important;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-end;
     padding-top: 0 !important;
-    width: 100%;
+    width: auto;
+    background-color: #3a1223;
 }
 
 nav#top-menu-nav,
 #top-menu {
     float: none !important;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 0;
     margin: 0;
     padding: 0;
+    width: auto;
     line-height: normal !important;
 }
 
 /* Nav items */
 #top-menu li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding-right: 0 !important;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+    border-left: 1px solid #6b3049;
+}
+
+#top-menu li:last-child {
+    border-right: 1px solid #6b3049;
 }
 
 /* Links */
 #top-menu a {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: #ffffff !important;
     text-decoration: none;
     display: block;
-    padding: 20px 18px !important;
+    padding: 24px 28px !important;
     position: relative;
-    transition: color 0.25s ease !important;
+    transition: background-color 0.25s ease !important;
     opacity: 1 !important;
-}
-
-/* Gold underline that slides in on hover */
-#top-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 18px;
-    right: 18px;
-    height: 2px;
-    background-color: #c9a227;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.25s ease;
 }
 
 /* Hover state */
 #top-menu a:hover,
 #top-menu-nav > ul > li > a:hover {
-    color: #c9a227 !important;
+    background-color: #4d1c33;
+    color: #ffffff !important;
     opacity: 1 !important;
-}
-
-#top-menu a:hover::after {
-    transform: scaleX(1);
 }
 
 /* Active / current page */
 #top-menu li.current_page_item > a,
 #top-menu li.current-menu-item > a,
 #top-menu li.current-menu-ancestor > a {
-    color: #c9a227 !important;
-}
-
-#top-menu li.current_page_item > a::after,
-#top-menu li.current-menu-item > a::after,
-#top-menu li.current-menu-ancestor > a::after {
-    transform: scaleX(1);
+    background-color: #4d1c33;
+    color: #ffffff !important;
 }
 
 /* Mobile nav bar */
@@ -103,23 +92,25 @@ nav#top-menu-nav,
 
 .mobile_menu_bar:before,
 .mobile_menu_bar:after {
-    color: #c9a227 !important;
+    color: #ffffff !important;
 }
 
 /* Mobile dropdown */
 .et_mobile_menu {
-    background-color: #1a1a1a;
-    border-top: 2px solid #c9a227;
+    background-color: #3a1223;
+    border-top: 1px solid #6b3049;
 }
 
 .et_mobile_menu li a {
-    color: rgba(255, 255, 255, 0.85) !important;
-    border-bottom-color: #333 !important;
+    color: #ffffff !important;
+    border-bottom-color: #6b3049 !important;
+    text-transform: none;
+    font-weight: 400;
 }
 
 .et_mobile_menu li a:hover {
-    color: #c9a227 !important;
-    background-color: #222 !important;
+    color: #ffffff !important;
+    background-color: #4d1c33 !important;
 }
 
 @media (max-width: 980px) {
@@ -130,5 +121,6 @@ nav#top-menu-nav,
 
     #et-top-navigation {
         justify-content: flex-end;
+        background-color: #000000;
     }
 }
