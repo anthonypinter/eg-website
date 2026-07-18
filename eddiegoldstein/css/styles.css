@@ -243,3 +243,12 @@ a { color: #bc7c73; }
 .ta-right        { text-align: right; }
 .va-top          { vertical-align: top; }
 .w-full          { width: 100%; }
+
+/* Gravity Demo box: keep text and image side-by-side on mobile too,
+   shrinking them to fit the narrower box instead of overflowing. */
+@media all and (max-width: 600px) {
+    .box-link-row { gap: 14px; }
+    .box-link-row .quote-times { font-size: 16pt; }
+    .box-link-row img { width: 40%; height: auto; max-width: 100px; }
+}
+
